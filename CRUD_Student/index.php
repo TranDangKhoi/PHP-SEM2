@@ -1,7 +1,7 @@
 <?php
 // Load đối tượng connection
 include_once("config.php");
-
+include("search.php");
 // Đọc toàn bộ bản ghi sau đó lưu vào một biến $result
 $result = mysqli_query($mysqli, "SELECT * FROM student ORDER BY id DESC");
 ?>
@@ -17,6 +17,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM student ORDER BY id DESC");
 </head>
 
 <body>
+    <a href="login.php">Login to your account</a>
     <a href="create.php">Add new student</a><br><br>
     <table width="90%" border=1>
         <tr>
@@ -37,6 +38,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM student ORDER BY id DESC");
         }
         ?>
     </table>
+
 </body>
 
 </html>
